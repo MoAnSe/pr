@@ -37,14 +37,16 @@ a{
     display: none;
 }
 .modal{
+    position: absolute;
     display: none;
+    left: 40%;
     width: 300px;
     height: 300px;
     margin:20px auto;
     background-color: #FFF8DC;
     padding: 30px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    flex-direction: column;
+    z-index: 999;
 }
 .close{
 
@@ -114,4 +116,51 @@ a{
         margin: 5px 0;
     }
     
+}
+.slides{
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.slider {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+  
+  
+.slider__item {
+      display: none;
+}
+  
+  
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+  
+  
+.next {
+    right: 0;
+}
+  
+  
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+  
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s;
+    animation-name: fade;
+    animation-duration: 1s;
 }
