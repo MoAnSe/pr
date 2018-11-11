@@ -1,6 +1,7 @@
 var modal = document.getElementById('modal');
 var btn = document.getElementById("btn");
 var close = document.getElementById("close");
+var block = document.getElementById("block");
 var slideIndex = 1;
 
 btn.onclick = function(){
@@ -30,6 +31,13 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none"; 
   }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
+  slides[slideIndex-1].style.display = "block";
+}
+block.onclick = function(){
+  if(block.className === "block"){
+    block.className = "block_b";
+  }
+  else{
+    block.className = "block"
+  }
 }
